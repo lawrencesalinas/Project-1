@@ -47,9 +47,6 @@ ball that fires at the given angle  and moves at a fast speed
 
 
 
-stretch
-
-against AI
 
 add game modes to change ball speed
 
@@ -59,4 +56,7 @@ Player 1 limited fire special ball
 
 Player 2 limited ability to slow down balls
 
-![wirefram](<https://whimsical.com/wireframe-project1-MyBUbaF9YXvasH4gAcA88S)
+
+
+against AI![wireframe project1](https://user-images.githubusercontent.com/22379194/138540531-9622c6af-3c10-4f47-af6f-545e4b409432.png)
+
