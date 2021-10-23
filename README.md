@@ -58,3 +58,5 @@ player 1 and player 2 animation
 Player 1 limited fire special ball
 
 Player 2 limited ability to slow down balls
+
+![wirefram](https://whimsical.com/wireframe-project1-MyBUbaF9YXvasH4gAcA88S)
