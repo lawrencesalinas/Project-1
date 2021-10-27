@@ -9,7 +9,7 @@ Player 1 fires a fast  ball 60-80
 And player 2 will try to catch them
 
 Ball goes past player 2, player 1 scores
-
+  
 Ball collides with player2, player 2 scores
 
 Player 2 catches specific amount of balls, player 2 wins else Player 1 wins

@@ -1,0 +1,15 @@
+body{
+   
+    display: flex;
+    justify-content: center;
+   
+    }
+
+
+canvas{
+    border: 1px solid black;
+    width: 75%;
+    height: 90vh;
+    background-color: aliceblue;
+  
+}
