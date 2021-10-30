@@ -24,13 +24,13 @@ The protector needs to prtect the castle by bloacking the fireballs using the sh
 * will display winning message
 
 
-#Stretch
+# Stretch
 
 * add game modes to change ball speed
 * player 1 and player 2 animation
 * Player 1 limited fire special ball
 * Player 2 limited ability to slow down balls
-* against AI!
+* against AI
 
 ![wireframe project1](https://user-images.githubusercontent.com/22379194/138540531-9622c6af-3c10-4f47-af6f-545e4b409432.png)
 
