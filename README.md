@@ -24,7 +24,7 @@ The protector needs to prtect the castle by bloacking the fireballs using the sh
 * will display winning message
 
 
-# Stretch
+## Stretch
 
 * add game modes to change ball speed
 * player 1 and player 2 animation
