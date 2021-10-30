@@ -91,7 +91,7 @@ let shield = new Shield(images,canvasXmid, 0, 140, 80)
 let circles = []
 const fire = (e) => {
      switch(e.key){
-        case "g":
+        case " ":
                             /*circle shoots out from the middle of the shooter*/
         let circle = new Circle(player2.width/2 + player2.x, player2.y, 20,-7) 
         circles.push(circle)  
