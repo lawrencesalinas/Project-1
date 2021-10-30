@@ -3,7 +3,8 @@
 ## About the game 
 
 This game is played by two opposing sides, each player will either choose the role of the  
-destroyer or the protector of the castle. The destroyers goal is to get through the protectors shield
+destroyer or the protector of the castle. The destroyers goal is to get through the protectors shield.
+The protector needs to prtect the castle by bloacking the fireballs using the shield.
 
 
 
@@ -30,5 +31,5 @@ if the circle collides with the upper edge, player 1 gets a score
 * Player 1 limited fire special ball
 * Player 2 limited ability to slow down balls
 * against AI!
-[wireframe project1](https://user-images.githubusercontent.com/22379194/138540531-9622c6af-3c10-4f47-af6f-545e4b409432.png)
+![wireframe project1](https://user-images.githubusercontent.com/22379194/138540531-9622c6af-3c10-4f47-af6f-545e4b409432.png)
 
