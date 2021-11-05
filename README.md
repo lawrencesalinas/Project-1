@@ -32,5 +32,9 @@ The protector needs to prtect the castle by bloacking the fireballs using the sh
 * Player 2 limited ability to slow down balls
 * against AI
 
+Deployed link : https://lawrencesalinas.github.io/Project-1/
+
 ![wireframe project1](https://user-images.githubusercontent.com/22379194/138540531-9622c6af-3c10-4f47-af6f-545e4b409432.png)
+
+
 
