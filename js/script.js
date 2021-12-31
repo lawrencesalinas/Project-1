@@ -1,15 +1,16 @@
 const canvas = document.querySelector("canvas")
+const resetGame = document.getElementById("restart")
+const images = document.getElementById("source")
 canvas.height = window.innerHeight
 canvas.width = window.innerWidth
-const resetGame = document.getElementById("restart")
 const c = canvas.getContext("2d")
+/*----variables used for results and scoring*----*/
 let playerOneScore = 0;
 let playerTwoScore = 0
 let roundWiiner = ""
 let weHaveAwinner = false
 
-
-const images = document.getElementById("source")
+/*--------------constructor functions to create the characters of the game-------------------*/
 function Shield(image, x, y, width, height){
     this.image = image
     this.x = x
@@ -31,11 +32,11 @@ function Player(x, y , color, width, height){
         c.fillStyle = this.color
         c.fillRect(this.x, this.y, this.width, this.height)
     }
+  
 }
 
 function Circle(x, y, radius,dy, caught){
-    
-    this.x = x
+     this.x = x
     this.y = y
     this.radius = radius 
     this.dy = dy
@@ -46,10 +47,18 @@ function Circle(x, y, radius,dy, caught){
         c.stroke()
         c.fill()
     }
-    this.fire = () => {
+    /*-----circle function when it reaches the winning score---*/
+    this.shootAndEndOfGame = () => {
+        if(playerOneScore === 10 || playerTwoScore === 10){
+            this.y += 300            /////circles
+            this.x = -20            ///////get sent outside the canvas
+            this.y +=  0           ///////and stop moving  
+        } else {
         this.y += this.dy 
+       }
     }
-    this.detect = () => {
+    /*---circle function when it collides with the shield---*/
+    this.detectPlayer = () => {
         if(this.y - this.radius < player.y + player.height && this.x + this.radius > shield.x && this.x < shield.x + shield.width){
             this.y = 300
             this.x = -20
@@ -67,21 +76,30 @@ function Circle(x, y, radius,dy, caught){
     }
     }    
 
-
+/*-------------character variables-------------*/
 let canvasXmid = (canvas.width/2 - 100)
 let player = new Player(canvasXmid, 0, '#bada55', 130, 70)
 let player2 = new Player(canvasXmid, canvas.height - 50, "brown", 150, 40)
 let shield = new Shield(images,canvasXmid, 0, 140, 80)
-let circles = []
 
+
+/*---------------------------------------------------------------------------------------------------*/
+/*------------------------------functions inside the game loop-------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------*/
+
+/*function to create multiple  circles with the use of the key spacebar*/
+let circles = []
 const fire = (e) => {
      switch(e.key){
         case " ":
-    let circle = new Circle(100 +player2.x, player2.y, 20,-7) 
+                            /*circle shoots out from the middle of the shooter*/
+        let circle = new Circle(player2.width/2 + player2.x, player2.y, 20,-7) 
         circles.push(circle)  
          }
 }
-const move = () => {
+
+/*function to control the shield and the destroyer from left and right directions as well as wall detection*/
+const movements = () => {
     if(controls.shooterRight){
         shield.x += 20
         if(shield.x + shield.width >= canvas.width){
@@ -109,7 +127,7 @@ const move = () => {
     }
 }
     
-
+/*function to assign & setup the key controls of the shooter and the shield*/
 let controls = {}
 const controller = (key, keyDown) => {
 if(key == "d"){
@@ -126,69 +144,63 @@ if(key == "ArrowLeft"){
 }
 }
 
-const gameReset = (a) => {
-  const reset = a.target.resetGame
+/*function to reset the game*/
+const gameReset = (e) => {
+  const reset = e.target.resetGame
+      shield.x = canvasXmid
+      player2.x = canvasXmid
       playerOneScore = 0
       playerTwoScore = 0
       roundWiiner = ""
-      shield.x = canvasXmid
-      shield.y = 0
-      player2.x = canvasXmid
-      player2.y = canvas.height - 50
-      weHaveAwinner = false
-    
-      
-} 
+      }
+     
 
-
-
-    
-const gerScoresAndResult = () => {
+const getScoresAndResult = () => {
     const scores = document.getElementById("score")
-    scores.innerText = `Player 1 score: ${playerOneScore} \n\n Player 2 score: ${playerTwoScore}`
-     if(playerOneScore === 20 && playerTwoScore < 20){
-            roundWiiner = "player1"
-            weHaveAwinner = true;
-     } else if(playerTwoScore === 20 && playerOneScore < 20 ){
-            roundWiiner = "player2"
-            weHaveAwinner = true;
-    }
-        
-    const result = document.getElementById("result")
-    result.innerText = `The round winner is ${roundWiiner}`
-    
+    scores.innerText = `Shield score: ${playerOneScore} \n\n Destroyer score: ${playerTwoScore}`
+     if(playerOneScore >= 10 && playerTwoScore < 20){
+            roundWiiner = "The shield has prevailed and protected the castle"
+                
+     } else if(playerTwoScore >= 10 && playerOneScore < 20 ){
+            roundWiiner = "The destroyer has has broken our shield and has taken over the castle"      
     }
 
- 
+    const result = document.getElementById("result")
+    result.innerText = roundWiiner
+    }
+
+
+ /*function to clear the game loop when it loops*/
 const clearInt = () =>{
     c.clearRect(0, 0, canvas.width, canvas.height)
 }
-
+/*----------------------------------game loop----------------------------------------------*/
 const gameLoop = () => {
-    
     clearInt()
     shield.render()
     player2.render()
-    for(var i = 0; i < circles.length; i++){
-        circles[i].draw()
-        circles[i].fire()
-        circles[i].detect()
-        circles[i].detectWall()
-     }
-    move()
-    gerScoresAndResult()
-    
+    /*----create  and renders multiple circles ---*/
+    for(var i = 0; i < circles.length; i++){   ////
+        circles[i].draw()               //////////
+        circles[i].shootAndEndOfGame()  /////////
+        circles[i].detectPlayer()       ////////
+        circles[i].detectWall()         ///////
+     }                          //////////////
+   /*---------------------------------------*/   
+    movements()
+    getScoresAndResult()   
 }
+/*------------------------------------------------------------------------------------------*/
 
+setInterval(gameLoop,1000/60)
 
-
-gameInterval = setInterval(gameLoop, 1000/60)
-let stopGameLoop = () => {clearInterval(gameInterval)}
+/*adding eventListerners to the program*/
 document.addEventListener("keydown", (e) =>{
     controller(e.key, true)
 })
 document.addEventListener("keyup", (e) => {
     controller(e.key, false)
 })
+
 restart.addEventListener("click", gameReset)
 document.addEventListener('keydown', fire)
