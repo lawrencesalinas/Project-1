@@ -203,4 +203,8 @@ document.addEventListener("keyup", (e) => {
 })
 
 restart.addEventListener("click", gameReset)
+<<<<<<< HEAD
 document.addEventListener('keydown', fire)
+=======
+document.addEventListener('keydown', fire)
+>>>>>>> e300862518ad3e722c785c8eb2823a4f8252a573
