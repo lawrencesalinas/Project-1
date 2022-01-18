@@ -10,13 +10,14 @@ You have to get pass through the shield and wreck havoc inside the castle.
 ## About the game 
 
 This game is a 2d shooting game played by two opposing sides, each player will either choose the role of the  
-d\Destroyer or the Protector of the castle. The Destroyers'goal is to get through the Protectors' shield.
+Destroyer or the Protector of the castle. The Destroyers'goal is to get through the Protectors' shield.
 The protector needs to prtect the castle by bloacking enough  fireballs using the shield and the game will be won,
-the Destroyers' mission is to shoot enough fireball pass the shield and the destroyer will win the game.
+the Destroyers' mission is to shoot enough fireball past the shield and the destroyer will win the game.
 
 ## Tech Being Used
 * HTML/CSS - Canvas to hold the game
 * JavaScript
+* Canvas
   
 ## MVP
 

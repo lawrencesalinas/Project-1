@@ -144,6 +144,9 @@ if(key == "ArrowLeft"){
 }
 }
 
+
+
+
 /*function to reset the game*/
 const gameReset = (e) => {
   const reset = e.target.resetGame
@@ -153,6 +156,14 @@ const gameReset = (e) => {
       playerTwoScore = 0
       roundWiiner = ""
       }
+
+const isntructions = (e) => {
+    const isntructions = document.getElementById("instructions")
+    isntructions.innerText = `How to play\n Destroyer controls: left key to move left, right key to move right, space to shoot.
+     Protecter controls: a key to move left and d key to move right.\n
+     Destroyer needs to get pass through the shield 10 times to win
+     Protector needs to get catch the fireballs 10 times to win \n -------`
+        }
      
 
 const getScoresAndResult = () => {
@@ -177,6 +188,7 @@ const clearInt = () =>{
 /*----------------------------------game loop----------------------------------------------*/
 const gameLoop = () => {
     clearInt()
+    isntructions()
     shield.render()
     player2.render()
     /*----create  and renders multiple circles ---*/
