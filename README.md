@@ -1,6 +1,7 @@
 # Protect the castle
 
 Deployed link : https://lawrencesalinas.github.io/Protect-the-castle/
+![protect the castle](https://user-images.githubusercontent.com/22379194/149902121-16ea49d9-2d20-428e-bc30-e6699f255d04.png)
 
 Which side are you on? the Destroyer or the Protector? the castle is under attack!!! As a Protector, you have to use your 
 shiled to deflect all of the Destroyers'  fireballs until exhaustion to save the castle. if you choose to be a Destroyer, 
