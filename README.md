@@ -1,6 +1,6 @@
 # Protect the castle
 
-Deployed link : https://lawrencesalinas.github.io/Protect-the-castle/
+Deployed link : [Protect the Castle](https://lawrencesalinas.github.io/Protect-the-castle/)
 ![protect the castle](https://user-images.githubusercontent.com/22379194/149902121-16ea49d9-2d20-428e-bc30-e6699f255d04.png)
 
 Which side are you on? the Destroyer or the Protector? the castle is under attack!!! As a Protector, you have to use your 
@@ -14,6 +14,7 @@ This game is a 2d shooting game played by two opposing sides, each player will e
 Destroyer or the Protector of the castle. The Destroyers' goal is to get through the Protectors' shield.
 The protector needs to protect the castle by blocking enough fireballs using the shield and the game will be won,
 the Destroyers' mission is to shoot enough fireball past the shield and the Destroyer will win the game.
+Deployed link : [Protect the Castle](https://lawrencesalinas.github.io/Protect-the-castle/)
 
 ## Tech Being Used
 * HTML/CSS
