@@ -1,21 +1,23 @@
 # Protect the castle
 
+Deployed link : https://lawrencesalinas.github.io/Protect-the-castle/
+
+Which side are you on? the Destroyer or the Protector? the castle is under attack!!! As a Protector, you have to use your 
+shiled to deflect all of the Destroyers'  fireballs until exhaustion to save the castle. if you choose to be a Destroyer, 
+You have to get pass through the shield and wreck havoc inside the castle.
+
+
 ## About the game 
 
-This game is played by two opposing sides, each player will either choose the role of the  
-destroyer or the protector of the castle. The destroyers goal is to get through the protectors shield.
-The protector needs to prtect the castle by bloacking the fireballs using the shield.
+This game is a 2d shooting game played by two opposing sides, each player will either choose the role of the  
+d\Destroyer or the Protector of the castle. The Destroyers'goal is to get through the Protectors' shield.
+The protector needs to prtect the castle by bloacking enough  fireballs using the shield and the game will be won,
+the Destroyers' mission is to shoot enough fireball pass the shield and the destroyer will win the game.
 
-
-<<<<<<< HEAD
-Ball goes past player 2, player 1 scores
+## Tech Being Used
+* HTML/CSS - Canvas to hold the game
+* JavaScript
   
-Ball collides with player2, player 2 scores
-
-Player 2 catches specific amount of balls, player 2 wins else Player 1 wins
-=======
->>>>>>> e300862518ad3e722c785c8eb2823a4f8252a573
-
 ## MVP
 
 * render two players
@@ -40,7 +42,7 @@ Player 2 catches specific amount of balls, player 2 wins else Player 1 wins
 * Player 2 limited ability to slow down balls
 * against AI
 
-Deployed link : https://lawrencesalinas.github.io/Project-1/
+
 
 ![wireframe project1](https://user-images.githubusercontent.com/22379194/138540531-9622c6af-3c10-4f47-af6f-545e4b409432.png)
 

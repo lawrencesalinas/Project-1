@@ -1,7 +1,6 @@
 const canvas = document.querySelector("canvas")
 const resetGame = document.getElementById("restart")
-const shield = document.getElementById("shield")
-const 
+const images = document.getElementById("shield")
 canvas.height = window.innerHeight
 canvas.width = window.innerWidth
 const c = canvas.getContext("2d")
@@ -81,7 +80,7 @@ function Circle(x, y, radius,dy, caught){
 let canvasXmid = (canvas.width/2 - 100)
 let player = new Player(canvasXmid, 0, '#bada55', 130, 70)
 let player2 = new Player(canvasXmid, canvas.height - 50, "brown", 150, 40)
-let shield = new Shield(shield,canvasXmid, 0, 140, 80)
+let shield = new Shield(images,canvasXmid, 0, 140, 80)
 
 
 /*---------------------------------------------------------------------------------------------------*/
