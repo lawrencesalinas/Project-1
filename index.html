@@ -9,23 +9,34 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <title>Canvas</title>
+    <title>PROTECT THE CASTLE</title>
   
 </head>
 <body>
     <div class = "main-container">
-
-    <div class = "score" id = "score"></div>
-    <canvas id= "canvas"></canvas>
-    <div class = "result" id = "result"></div>
-    <button class = "reset" id = "restart">restart game</button>
-    <img src = "https://github.com/lawrencesalinas/Project-1/blob/main/css/pngegg.png?raw=true" alt="shield"  id = "shield">
-
-
+    <div class="canvas-container">
+        <canvas id= "canvas"></canvas>
+        <div class="start-game-overlay" id="overlay">
+                <button id="start">Play Now</button>
+        </div>
+        <div class = "score" id = "score"></div>
+        <div class="result-container">
+            <div class = "result" id = "result">
+                <span id="result-text"></span>
+            </div>
+        </div>
+    </div>
+  
+    <button class = "reset" id = "restart">restart game</button> 
+    <button class = "how-to" id = "how-to">How to play</button> 
+    
+    </div>        
+    <div class = "instructions" id = "instructions">
+        <span id="instructions-text"></span>
+        <img src="./css//wasd.png" alt="wasd-keys" id="wasd">
+        <img src="./css//arrows.png" alt="arrow-keys" id="arrows">
+    </div>
+    </div>
     <script src = "js/script.js"></script>
-    </div>
-    <div class = "footer">
-    <div class = "instructions" id = "instructions"></div>
-    </div>
 </body>
 </html>
